@@ -15,8 +15,6 @@ phases:
 
   post_build:
     commands:
-      - echo "Restarting Nginx..."
-      - sudo systemctl restart nginx
       - echo "Deployment Completed Successfully!"
 
 artifacts:

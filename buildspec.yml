@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Updating packages..."
+      - sudo apt update -y
+      - echo "Installing Nginx..."
+      - sudo apt install nginx -y
+
+  build:
+    commands:
+      - echo "Copying index.html to Nginx web root..."
+      - sudo cp index.html /var/www/html/index.html
+
+  post_build:
+    commands:
+      - echo "Restarting Nginx..."
+      - sudo systemctl restart nginx
+      - echo "Deployment Completed Successfully!"
+
+artifacts:
+  files:
+    - "**/*"

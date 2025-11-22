@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>AWS CodeDeploy Test Page</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 40px;
+            background: #f5f5f5;
             text-align: center;
+            padding: 50px;
         }
         h1 {
-            color: #333;
+            color: #2c7be5;
         }
         p {
-            color: #555;
+            font-size: 18px;
+            color: #444;
+        }
+        .box {
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            width: 60%;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a sample index.html file deployed using AWS CodeBuild / S3 / EC2 /Pipeline.</p>
+
+    <div class="box">
+        <h1>Deployment Successful 🎉</h1>
+        <p>This page was deployed using <strong>AWS CodeBuild + CodeDeploy</strong>.</p>
+        <p>Your Nginx server is working correctly.</p>
+    </div>
+
 </body>
 </html>

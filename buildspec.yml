@@ -4,21 +4,19 @@ phases:
   install:
     commands:
       - echo "Updating packages..."
-      - sudo apt update -y
+      - sudo apt-get update -y
       - echo "Installing Nginx..."
-      - sudo apt install nginx -y
+      - sudo apt-get install nginx -y
 
   build:
     commands:
       - echo "Copying index.html to Nginx web root..."
-      - sudo cp index.html /var/www/html/index.html
+      - sudo cp index.html /var/www/html/
 
   post_build:
     commands:
       - echo "Deployment Completed Successfully!"
-
 artifacts:
   files:
-    - index.html
-    - appspec.yml
-    - scripts/**/*
+    - /var/www/html/index.html
+

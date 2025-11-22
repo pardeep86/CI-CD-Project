@@ -17,3 +17,8 @@ phases:
     commands:
       - echo "Deployment Completed Successfully!"
 
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - scripts/**/*

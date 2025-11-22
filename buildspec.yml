@@ -17,6 +17,3 @@ phases:
     commands:
       - echo "Deployment Completed Successfully!"
 
-artifacts:
-  files:
-    - "**/*"
